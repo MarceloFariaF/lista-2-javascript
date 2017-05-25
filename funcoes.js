@@ -190,5 +190,19 @@ function calcula14(){
     document.getElementById("mensagem").innerHTML = "R$" + mensagem
 }
 function calcula15() {
-    
+    var valor = document.getElementById("valor").value;
+    var esc = document.getElementsByName("esc").value;
+    var renda
+
+    if (esc = "invest") {
+        renda = (renda * 0.03);
+        arredondado = parseFloat(renda.toFixed(2));
+        mensagem = arredondado
+    }
+    else if (esc = "invest2") {
+        renda = (renda * 0.04);
+        arredondado = parseFloat(renda.toFixed(2));
+        mensagem = arredondado
+    }
+    document.getElementById("mensagem").innerHTML = mensagem
 }
