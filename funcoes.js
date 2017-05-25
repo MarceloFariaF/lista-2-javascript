@@ -70,5 +70,26 @@ function calcula10() {
     }
     document.getElementById("mensagem").innerHTML = mensagem
 }
+function calcula11() {
+    var salario = document.getElementById("salario").value;
+    var aumento
 
+    if (salario <= 350) {
+        aumento = (salario * 1.15);
+        mensagem = aumento;
+    }
+    else if ((salario > 300) && (salario <= 600)) {
+        aumento = (salario *1.1);
+        mensagem = aumento;
+    }
+    else if ((salario > 600) && (salario <= 900)) {
+        aumento = (salario *1.05);
+        mensagem = aumento;
+    }
+    else if (salario > 900) {
+        aumento = (salario * 1);
+        mensagem = aumento;
+    }
+    document.getElementById("mensagem").innerHTML = mensagem
+}
 
