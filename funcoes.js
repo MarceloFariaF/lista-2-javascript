@@ -159,4 +159,36 @@ function calcula13(){
     }
     document.getElementById("mensagem").innerHTML = mensagem
 }
+function calcula14(){
+    var salario = document.getElementById("salario").value;
+    var sal2
 
+    if (salario < 300) {
+        sal2 = (salario * 1.5);
+        mensagem = sal2
+    }
+    else if ((salario >= 300) && (salario < 500)) {
+        sal2 = (salario * 1.4)
+        mensagem = sal2
+    }
+    else if ((salario >= 500) && (salario < 700)) {
+        sal2 = (salario * 1.3)
+        mensagem = sal2
+    }
+    else if ((salario >= 700) && (salario < 800)) {
+        sal2 = (salario * 1.2)
+        mensagem = sal2
+    }
+    else if ((salario >= 800) && (salario < 1000)) {
+        sal2 = (salario * 1.1)
+        mensagem = sal2
+    }
+    else if (salario >1000) {
+        sal2 = (salario * 1.05)
+        mensagem = sal2
+    }
+    document.getElementById("mensagem").innerHTML = "R$" + mensagem
+}
+function calcula15() {
+    
+}
