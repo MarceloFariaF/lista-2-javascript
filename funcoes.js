@@ -98,23 +98,65 @@ function calcula11() {
     document.getElementById("mensagem").innerHTML = mensagem;
 }
 function calcula12(){
-    var salario = document.getElementById("salario").value;
+    var salario1 = document.getElementById("salario1").value;
     var grat
     var imposto
     var arredondado
 
-    if (salario <= 350) {
-        grat = (salario + 100);
+    if (salario1 <= 350) {
+        grat = (salario1 + 100);
         imposto = grat - (grat * 0.07);
         arredondado = parseFloat(imposto.toFixed(2));
         mensagem = arredondado;
     }
-    else if ((salario > 350) && (salario <= 600)) {
-        grat = (salario + 75);
-        imposto = grat - (grat * 0.05);
+    else if ((salario1 > 350) && (salario1 <= 600)) {
+        grat = (salario1 + 75);
+        imposto = grat - (grat * 0.07);
+        arredondado = parseFloat(imposto.toFixed(2));
+        mensagem = arredondado;
+    }
+    else if ((salario1 > 600) && (salario1 <= 900)) {
+        grat = (salario1 + 50);
+        imposto = grat - (grat * 0.07);
+        arredondado = parseFloat(imposto.toFixed(2));
+        mensagem = arredondado;
+    }
+    else if (salario1 > 900) {
+        grat = (salario1 + 35);
+        imposto = (grat * 0.07);
         arredondado = parseFloat(imposto.toFixed(2));
         mensagem = arredondado;
     }
     document.getElementById("mensagem").innerHTML = mensagem;
+}
+function calcula13(){
+    var preco = document.getElementById("preco").value;
+    var preco2
+    var p
+
+
+    if (preco <= 50) {
+        preco2 = (preco * 1.05);
+    }
+    else if ((preco > 50) && (preco <= 100)) {
+            preco2 = (preco * 1.1)
+    }
+    else if (preco > 100) {
+        preco2 = (preco * 1.15)
+    }
+
+    if (preco2 <= 80) {
+        mensagem = "Barato"
+    }
+    else if ((preco2 > 80) && (preco2 <= 120)) {
+        mensagem = "Normal"
+    }
+    else if ((preco2 > 120) && (preco2 <= 200)) {
+        mensagem = "Caro"
+    }
+    else if (preco2 > 200) {
+        mensagem = "Muito Caro"
+    }
+    document.getElementById("mensagem").innerHTML = mensagem
 }
 
