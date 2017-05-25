@@ -95,6 +95,26 @@ function calcula11() {
         arredondado = parseFloat(aumento.toFixed(2))
         mensagem = arredondado;
     }
-    document.getElementById("mensagem").innerHTML = mensagem
+    document.getElementById("mensagem").innerHTML = mensagem;
+}
+function calcula12(){
+    var salario = document.getElementById("salario").value;
+    var grat
+    var imposto
+    var arredondado
+
+    if (salario <= 350) {
+        grat = (salario + 100);
+        imposto = grat - (grat * 0.07);
+        arredondado = parseFloat(imposto.toFixed(2));
+        mensagem = arredondado;
+    }
+    else if ((salario > 350) && (salario <= 600)) {
+        grat = (salario + 75);
+        imposto = grat - (grat * 0.05);
+        arredondado = parseFloat(imposto.toFixed(2));
+        mensagem = arredondado;
+    }
+    document.getElementById("mensagem").innerHTML = mensagem;
 }
 
