@@ -193,22 +193,8 @@ function calcula15() {
     var esc = document.getElementsByName("esc").value;
     var valor = document.getElementById("valor").value;
     var renda
-switch ("esc")
-    case invest {
-        renda = (renda * 0.03);
-        arredondado = parseFloat(renda.toFixed(2));
-        mensagem = arredondado
-        break
-    }
-    case invest2 {
-        renda = (renda * 0.04);
-        arredondado = parseFloat(renda.toFixed(2));
-        mensagem = arredondado
-        break
-    default {
-            mensagem = "Selecione um Campo"
-        }
 
-    }
+
+
     document.getElementById("mensagem").innerHTML = mensagem
 }
