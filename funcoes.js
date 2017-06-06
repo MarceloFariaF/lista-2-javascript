@@ -190,11 +190,15 @@ function calcula14(){
     document.getElementById("mensagem").innerHTML = "R$" + mensagem
 }
 function calcula15() {
-    var esc = document.getElementsByName("esc").value;
     var valor = document.getElementById("valor").value;
-    var renda
+    var mensagem, renda;
 
+    switch (invest) {
 
+        renda = (valor * 0.03);
+            mensagem = renda
+    }
 
-    document.getElementById("mensagem").innerHTML = mensagem
+    document.getElementById("mensagem1").innerHTML = mensagem
 }
+
